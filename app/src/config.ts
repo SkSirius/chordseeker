@@ -1,1 +1,1 @@
-export const BASE_URL = process.env.API_URL || 'http://localhost:3000';
+export const BASE_URL = 'http://c_api:3000';

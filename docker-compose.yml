@@ -34,8 +34,10 @@ services:
     build:
       context: ./app
       dockerfile: Dockerfile
+    depends_on:
+      - c_api
     ports:
-      - "9000:9000"
+      - "8100:8100"
     environment:
       - API_URL=http://c_api:3000
       - NODE_ENV=developmenet

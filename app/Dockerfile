@@ -12,4 +12,4 @@ RUN npm install
 ADD . /app
 
 # run api
-CMD ["npm", "start"]
+CMD ["npm", "run", "ionic:serve"]

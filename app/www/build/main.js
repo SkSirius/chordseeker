@@ -75,12 +75,11 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/SkSirius/Programming/chordseeker/app/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color=\'secondary\'>\n    <ion-title>Search</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-searchbar (ionInput)="search($event)"></ion-searchbar>\n    <ion-list>\n      <ion-item *ngFor="let chord of chordList">\n        <img [src]=\'chord.image\' />\n      </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/SkSirius/Programming/chordseeker/app/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/app/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color=\'secondary\'>\n    <ion-title>Search</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-searchbar (ionInput)="search($event)"></ion-searchbar>\n    <ion-list>\n      <ion-item *ngFor="let chord of chordList">\n        <img [src]=\'chord.image\' />\n      </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/app/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_data_chords__["a" /* ChordProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_data_chords__["a" /* ChordProvider */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_data_chords__["a" /* ChordProvider */]])
 ], HomePage);
 
-var _a, _b;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -246,7 +245,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/SkSirius/Programming/chordseeker/app/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/SkSirius/Programming/chordseeker/app/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/app/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/app/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -260,7 +259,7 @@ MyApp = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BASE_URL; });
-var BASE_URL = 'http://localhost:3000';
+var BASE_URL = 'http://c_api:3000';
 //# sourceMappingURL=config.js.map
 
 /***/ })
