@@ -1,0 +1,52 @@
+version: "3.3"
+volumes:
+  mongo:
+services:
+  c_api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    depends_on:
+      - mongo_db
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=mongodb://mongo_db:27017
+      - NODE_ENV=development
+    volumes:
+      - "./api:/api"
+      - "/api/node_modules"
+  c_admin:
+    build:
+      context: ./admin
+      dockerfile: Dockerfile
+    depends_on:
+      - c_api
+    ports:
+      - "4200:4200"
+    environment:
+      - NODE_ENV=developmenet
+      - API_URL=http://c_api:3000
+    volumes:
+      - "./admin:/admin"
+      - "/admin/node_modules"
+  c_app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000"
+    environment:
+      - API_URL=http://c_api:3000
+      - NODE_ENV=developmenet
+    volumes:
+      - "./app:/app"
+      - "/app/node_modules"
+  mongo_db:
+    restart: "always"
+    image: mongo:latest
+    healthcheck: { test: "echo 'db.stats().ok' | mongo localhost:27017 --quiet" }
+    volumes:
+      - "mongo:/data/db"
+    ports:
+      - "27017:27017"

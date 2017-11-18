@@ -3,14 +3,10 @@ var mongoose = require('mongoose');
 var config = require('./config');
 mongoose.Promise = global.Promise;
 
-//var conf = require('./config');
-//var logger = require('./logger');
-
 function init(callback) {
-    var url = config.mongodb.url,
-        opts = config.mongodb.options;
+    var url = config.DATABASE_URL,
+        opts = {};
 
-    //logger.info(`Connecting to database: ${url} with options ${JSON.stringify(opts)}`);
     mongoose.connect(url, opts, function(err){
         if (err) {
             return callback(err);

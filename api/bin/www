@@ -10,6 +10,7 @@ var http = require('http');
 var db = require('../lib/database');
 var logger = require('../lib/logger');
 var restify = require('restify');
+var config  = require('../lib/config');
 
 /**
  * Get port from environment and store in Express.
