@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{ title }}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class='form-group'>
+        <label class='control-label'>Name:</label>
+        <input class='form-control' type='text' [(ngModel)]='item.name' placeholder='Phrase name' />
+    </div>
+    <div class='form-group'>
+        <label class='control-label'>Description:</label>
+        <textarea class='form-control' rows='3' placeholder="Description" [(ngModel)]='item.description'></textarea>
+    </div>
+    <div class='form-group'>
+        <label class='control-label'>Image:</label>
+        <input class='form-control' type='text' [(ngModel)]='item.image' placeholder='Image url' />
+    </div>
+</div>
+<div class="modal-footer">
+    <button type='button' class='btn btn-success' (click)='save()'>Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>
