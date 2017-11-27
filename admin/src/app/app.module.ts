@@ -8,14 +8,24 @@ import { RoutesModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChordsComponent } from './chords/chords.component';
 import { ChordModalComponent } from './chords/chordModal/chord-modal.component';
+import { KeysComponent } from './keys/keys.component';
+import { KeyModalComponent } from './keys/keyModal/key-modal.component';
+import { PhrasesComponent } from './phrases/phrases.component';
+import { PhraseModalComponent } from './phrases/phraseModal/phrase-modal.component'
 
 import { ChordService } from './chord-service.service';
+import { KeyService } from './key-service.service';
+import { PhraseService } from './phrase-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChordsComponent,
-    ChordModalComponent
+    ChordModalComponent,
+    KeysComponent,
+    KeyModalComponent,
+    PhrasesComponent,
+    PhraseModalComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +35,7 @@ import { ChordService } from './chord-service.service';
     RoutesModule
   ],
   entryComponents: [ ChordModalComponent ],
-  providers: [ChordService],
+  providers: [ChordService, KeyService, PhraseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
